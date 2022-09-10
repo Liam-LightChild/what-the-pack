@@ -1,0 +1,49 @@
+{
+    "format_version": 2,
+    "header": {
+        "uuid": "2c92f4eb-fac1-475c-a3f8-70966c4b5957",
+        "name": "pack.name",
+        "description": "pack.description",
+        "base_game_version": [
+            1,
+            19,
+            22
+        ],
+        "lock_template_options": false,
+        "version": [
+            1,
+            0,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "uuid": "b2d3f41e-ad55-44a7-9b50-61e756637db0",
+            "type": "world_template",
+            "description": "World template",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "a44d00c3-eff4-4052-abb7-6529a8b216cd",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        },
+        {
+            "uuid": "521f1a58-f271-490d-9eb2-b3591af8a435",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ]
+}

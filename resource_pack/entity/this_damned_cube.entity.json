@@ -1,0 +1,24 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "what:this_damned_cube",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/this_damned_cube"
+            },
+            "geometry": {
+                "default": "geometry.this_damned_cube"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#b0e825",
+                "overlay_color": "#8ca753"
+            }
+        }
+    }
+}

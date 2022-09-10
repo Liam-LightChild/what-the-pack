@@ -1,0 +1,40 @@
+{
+    "format_version": 2,
+    "header": {
+        "uuid": "521f1a58-f271-490d-9eb2-b3591af8a435",
+        "name": "pack.name",
+        "description": "pack.description",
+        "min_engine_version": [
+            1,
+            16,
+            100
+        ],
+        "version": [
+            1,
+            0,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "uuid": "4cffa470-807a-40e8-8ee3-ed00adcbced6",
+            "description": "Behavior for things",
+            "type": "data",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "a44d00c3-eff4-4052-abb7-6529a8b216cd",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "format_version": 2,
+    "header": {
+        "uuid": "a44d00c3-eff4-4052-abb7-6529a8b216cd",
+        "name": "pack.name",
+        "description": "pack.description",
+        "min_engine_version": [
+            1,
+            16,
+            100
+        ],
+        "version": [
+            1,
+            0,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "uuid": "3b0008f4-cdfa-4612-a9e0-7b0657bfd0aa",
+            "description": "Resources for things",
+            "type": "resources",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+pack.name=What the Pack (Resources)
+pack.description=Beyond compression. This is just the resources! Add the Behavior Pack!
+
+entity.what:this_damned_cube.name=This Damned Cube
+
+item.spawn_egg.entity.what:this_damned_cube.name=Spawn Damned Cube
