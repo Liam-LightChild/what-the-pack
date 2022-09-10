@@ -1,7 +1,8 @@
 param(
     [ValidateSet('Behavior','Resources','WorldTemplate')]
     [string[]]$Build = ('Behavior','Resources','WorldTemplate'),
-    [switch]$Individual
+    [switch]$Individual,
+    [switch]$NoVerify
 )
 
 if ($Individual) {
@@ -16,6 +17,24 @@ if ($Individual) {
         }
     }
 } else {
+    if(!$NoVerify) {
+        $Incomplete = $false
+
+        if($Build.Contains('Behavior') -and !$Build.Contains('Resources')) {
+            Write-Warning "'Behavior' is enabled without 'Resources'"
+            $Incomplete = $true
+        }
+
+        if($Build.Contains('WorldTemplate') -and !($Build.Contains('Behavior') -and $Build.Contains('Resources'))) {
+            Write-Warning "'Behavior' is enabled without 'Behavior' and 'Resources'"
+            $Incomplete = $true
+        }
+
+        if($Incomplete) {
+            Write-Warning "Due to the above issue(s), the generated mcaddon file will not install all required components on it's own. Only do this if you're sure you have the correct assets already installed!"
+        }
+    }
+
     Write-Progress "Building pack" "Initializing" 1 -PercentComplete 0
 
     if(Test-Path _build) {
