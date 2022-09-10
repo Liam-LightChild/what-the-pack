@@ -1,0 +1,85 @@
+{
+    "format_version": "1.19.100",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "what:cardboard_box",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:healable": {
+                "force_use": false,
+                "items": [
+                    {
+                        "item": "minecraft:paper",
+                        "heal_amount": 10
+                    }
+                ]
+            },
+            "minecraft:health": {
+                "value": 20,
+                "max": 100
+            },
+            "minecraft:physics": {
+                "has_collision": true,
+                "has_gravity": true
+            },
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:is_stackable": {},
+            "minecraft:collision_box": {
+                "height": 1,
+                "width": 1
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:navigation.walk": {
+                "avoid_damage_blocks": true,
+                "avoid_portals": true,
+                "avoid_sun": false,
+                "avoid_water": true,
+                "blocks_to_avoid": [],
+                "can_breach": false,
+                "can_break_doors": false,
+                "can_jump": true,
+                "can_open_doors": false,
+                "can_open_iron_doors": false,
+                "can_pass_doors": true,
+                "can_path_from_air": false,
+                "can_path_over_lava": false,
+                "can_path_over_water": false,
+                "can_sink": true,
+                "can_swim": false,
+                "can_walk": true,
+                "can_walk_in_lava": false,
+                "is_amphibious": false
+            },
+            "minecraft:floats_in_liquid": {},
+            "minecraft:can_climb": {},
+            "minecraft:jump.static": {
+                "jump_power": 0.42
+            },
+            "minecraft:movement": {
+                "max": 0.3
+            },
+            "minecraft:movement.generic": {
+                "max_turn": 90
+            },
+            "minecraft:behavior.random_stroll": {
+                "interval": 100,
+                "xz_dist": 10,
+                "y_dist": 7
+            },
+            "minecraft:behavior.panic": {
+                "force": false,
+                "ignore_mob_damage": false,
+                "prefer_water": false,
+                "speed_multiplier": 5
+            }
+        }
+    }
+}

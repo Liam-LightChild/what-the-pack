@@ -1,0 +1,24 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "what:cardboard_box",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/cardboard_box"
+            },
+            "geometry": {
+                "default": "geometry.cardboard_box"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#ba722c",
+                "overlay_color": "#b8926d"
+            }
+        }
+    }
+}
