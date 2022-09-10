@@ -8,11 +8,16 @@ This document describes the stages of life this pack has experienced.
 
 - Resource Pack v1.0.1
 - Behavior Pack v1.0.1
-- World Template v1.0.0 (TBD)
+- World Template v1.0.1
 
 ### Cardboard Box
 - Walks around.
 - Looks like a cardboard box used for shipping.
+
+### World Template
+- Generated from Seed Template: Survival Islands
+- Now contains 100% more Cardboard Box
+- Now contains 99% less Cat Box
 
 ---
 
