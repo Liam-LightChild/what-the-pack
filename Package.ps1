@@ -1,38 +1,41 @@
 param(
-    [switch]$NoBehaviorPack,
-    [switch]$NoResourcePack,
-    [switch]$NoWorldTemplate,
+    [ValidateSet('Behavior','Resources','WorldTemplate')]
+    [string[]]$Build = ('Behavior','Resources','WorldTemplate'),
     [switch]$Individual
 )
 
 if ($Individual) {
-    if (!$NoBehaviorPack) {
-        Compress-Archive .\behavior_pack\* what-behavior.mcpack -Force
-    }
-
-    if (!$NoResourcePack) {
-        Compress-Archive .\resource_pack\* what-resources.mcpack -Force
-    }
-
-    if (!$NoWorldTemplate) {
-        Compress-Archive .\world_template\* what-world-template.mctemplate -Force
+    for ($i = 0; $i -lt $Build.Count; $i++) {
+        $item = $Build[$i]
+        Write-Progress "Building pack" $item 1 -PercentComplete (([float]$i/[float]$Build.Count)*100.0)
+        switch ($item) {
+            "Behavior" { Compress-Archive .\behavior_pack\* what-behavior.mcpack -Force }
+            "Resources" { Compress-Archive .\resource_pack\* what-resources.mcpack -Force }
+            "WorldTemplate" { Compress-Archive .\world_template\* what-world-template.mctemplate -Force }
+            Default {}
+        }
     }
 } else {
-    [string[]]$Directories = $null
+    Write-Progress "Building pack" "Initializing" 1 -PercentComplete 0
 
-    if (!$NoBehaviorPack) {
-        $Directories = ,".\behavior_pack"
+    if(Test-Path _build) {
+        Remove-Item _build -Recurse
     }
 
-    if (!$NoResourcePack) {
-        if($null -eq $Directories) { $Directories = ,".\resource_pack" }
-        else { $Directories = $Directories + ".\resource_pack" }
+    $null = New-Item _build -ItemType Directory
+
+    for ($i = 0; $i -lt $Build.Count; $i++) {
+        $item = $Build[$i]
+        Write-Progress "Building pack" $item 1 -PercentComplete (([float]$i/[float]$Build.Count)*100.0)
+        switch ($item) {
+            "Behavior" { Copy-Item .\behavior_pack _build\$item -Recurse }
+            "Resources" { Copy-Item .\resource_pack _build\$item -Recurse }
+            "WorldTemplate" { Copy-Item .\world_template _build\$item -Recurse }
+            Default {}
+        }
     }
 
-    if (!$NoWorldTemplate) {
-        if($null -eq $Directories) { $Directories = ,".\world_template" }
-        else { $Directories = $Directories + ".\world_template" }
-    }
-
-    Compress-Archive $Directories what.mcaddon -Force
+    Write-Progress "Building pack" "Finishing up" 1 -PercentComplete 100
+    Compress-Archive _build\* .\what.mcaddon -Force -CompressionLevel Optimal
+    Remove-Item _build -Recurse
 }

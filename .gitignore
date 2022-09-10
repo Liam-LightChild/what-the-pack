@@ -1,3 +1,4 @@
 *.mcpack
 *.mcaddon
 *.mctemplate
+_build
