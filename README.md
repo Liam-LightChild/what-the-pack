@@ -1,7 +1,7 @@
 # What the Pack!?
 
 This is a Bedrock behavior pack, resource pack, and world template that
-intentionally doesn't make much sense. New content comes often at the
+intentionally don't make much sense. New content comes often at the
 moment.
 
 ## Installing
@@ -29,5 +29,4 @@ Or, if you want, generate it from a branch or tag of your choice by running
 # => what-behavior.mcpack
 # => what-resources.mcpack
 # => what-world-template.mctemplate
-
 ```
