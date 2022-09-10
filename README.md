@@ -15,6 +15,10 @@ Or, if you want, generate it from a branch or tag of your choice by running
 ```pwsh
 # Generate the default configuration (everything)
 .\Package.ps1
+# => what.mcaddon
+# |- => resource pack
+# |- => behavior pack
+# \- => world template
 
 # Generate with only the specified components
 # (this command is equivilent to the above command)
@@ -26,7 +30,7 @@ Or, if you want, generate it from a branch or tag of your choice by running
 
 # Generate individual pack files (can be combined with -Build)
 .\Package.ps1 -Individual
-# => what-behavior.mcpack
-# => what-resources.mcpack
-# => what-world-template.mctemplate
+# => what-behavior.mcpack => behavior pack
+# => what-resources.mcpack => resource pack
+# => what-world-template.mctemplate => world template
 ```
