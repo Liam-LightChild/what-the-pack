@@ -6,13 +6,13 @@
         "description": "pack.description",
         "min_engine_version": [
             1,
-            16,
-            100
+            19,
+            22
         ],
         "version": [
             1,
-            0,
-            1
+            1,
+            0
         ]
     },
     "modules": [
@@ -22,8 +22,8 @@
             "type": "data",
             "version": [
                 1,
-                0,
-                1
+                1,
+                0
             ]
         }
     ],
@@ -32,8 +32,8 @@
             "uuid": "a44d00c3-eff4-4052-abb7-6529a8b216cd",
             "version": [
                 1,
-                0,
-                1
+                1,
+                0
             ]
         }
     ]

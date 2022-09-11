@@ -1,5 +1,5 @@
 {
-    "format_version": "1.16.100",
+    "format_version": "1.19.22",
     "minecraft:entity": {
         "description": {
             "identifier": "what:this_damned_cube",
