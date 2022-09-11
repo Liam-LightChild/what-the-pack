@@ -79,6 +79,9 @@
                 "ignore_mob_damage": false,
                 "prefer_water": false,
                 "speed_multiplier": 5
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/cardboard_box.loot.json"
             }
         }
     }
