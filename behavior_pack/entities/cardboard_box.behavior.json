@@ -9,7 +9,7 @@
         },
         "components": {
             "minecraft:health": {
-                "value": 20,
+                "value": 100,
                 "max": 100
             },
             "minecraft:physics": {
