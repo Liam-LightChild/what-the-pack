@@ -8,3 +8,4 @@ item.spawn_egg.entity.what:this_damned_cube.name=Spawn Damned Cube
 item.spawn_egg.entity.what:cardboard_box.name=Spawn Cardboard Box
 
 item.what:cardboard=Cardboard
+item.what:cardboard_box=Cardboard Box

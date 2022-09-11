@@ -4,6 +4,9 @@
     "texture_data": {
         "what.cardboard": {
             "textures": "textures/items/cardboard"
+        },
+        "what.cardboard_box": {
+            "textures": "textures/items/cardboard_box"
         }
     }
 }
