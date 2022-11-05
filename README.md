@@ -1,8 +1,7 @@
 # What the Pack!?
 
 This is a Bedrock behavior pack, resource pack, and world template that
-intentionally don't make much sense. New content comes often at the
-moment.
+intentionally don't make much sense.
 
 ## Installing
 
